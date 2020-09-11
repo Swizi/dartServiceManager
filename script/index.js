@@ -1,5 +1,5 @@
 const burger = document.querySelector(".burger");
-const menu = document.querySelector(".navigation-mobile");
+const menu = document.querySelector(".navigation_mobile");
 
 if (window.addEventListener){
     burger.addEventListener("click", toggleMenu, false);
