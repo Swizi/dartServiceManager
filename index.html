@@ -23,11 +23,11 @@
         </div>
         <nav>
           <ul class="navigation_list">
-            <li class="navigation__item">Home</li>
-            <li class="navigation__item">Service</li>
-            <li class="navigation__item">Extension</li>
-            <li class="navigation__item">Pricing</li>
-            <li class="navigation__item">Help</li>
+            <li class="navigation__item"><a href="#home">Home</a></li>
+            <li class="navigation__item"><a href="#service">Service</a></li>
+            <li class="navigation__item"><a href="#extension">Extension</a></li>
+            <li class="navigation__item"><a href="#pricing">Pricing</a></li>
+            <li class="navigation__item"><a href="#help">Help</a></li>
           </ul>
         </nav>
         <a
@@ -53,27 +53,27 @@
       </header>
       <nav class="navigation_mobile">
         <ul class="navigation_mobile__list">
-          <li class="navigation_mobile__item" onclick="toggleMenu();">
-            <a href="#" class="navigation_mobile__item-link">Home</a>
+          <li class="navigation_mobile__item">
+            <a href="#home" class="navigation_mobile__item-link" onclick="toggleMenu();">Home</a>
           </li>
-          <li class="navigation_mobile__item" onclick="toggleMenu();">
-            <a href="#" class="navigation_mobile__item-link">Service</a>
+          <li class="navigation_mobile__item">
+            <a href="#service" class="navigation_mobile__item-link" onclick="toggleMenu();">Service</a>
           </li>
-          <li class="navigation_mobile__item" onclick="toggleMenu();">
-            <a href="#" class="navigation_mobile__item-link">Extension</a>
+          <li class="navigation_mobile__item">
+            <a href="#extension" class="navigation_mobile__item-link" onclick="toggleMenu();">Extension</a>
           </li>
-          <li class="navigation_mobile__item" onclick="toggleMenu();">
-            <a href="#" class="navigation_mobile__item-link">Pricing</a>
+          <li class="navigation_mobile__item">
+            <a href="#pricing" class="navigation_mobile__item-link" onclick="toggleMenu();">Pricing</a>
           </li>
-          <li class="navigation_mobile__item" onclick="toggleMenu();">
-            <a href="#" class="navigation_mobile__item-link">Help</a>
+          <li class="navigation_mobile__item">
+            <a href="#help" class="navigation_mobile__item-link" onclick="toggleMenu();">Help</a>
           </li>
-          <li class="navigation_mobile__item" onclick="toggleMenu();">
-            <a href="#" class="navigation_mobile__item-link">Sign up</a>
+          <li class="navigation_mobile__item">
+            <a href="#" class="navigation_mobile__item-link" onclick="toggleMenu();">Sign up</a>
           </li>
         </ul>
       </nav>
-      <div class="introduction">
+      <div class="introduction" id="home">
         <div class="introduction__text-block">
           <h1 class="introduction__header-text">
             lorem Ipsum<br />
@@ -201,9 +201,9 @@
       </div>
     </div>
     <div class="services-container">
-      <div class="services">
+      <div class="services" id="service">
         <div class="services__header-block">
-          <h3 class="services__header-text">Services</h3>
+          <h3 class="main_header-text">Services</h3>
           <p class="services__header-subtext">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna
@@ -374,7 +374,7 @@
       </div>
     </div>
     <div class="customers-container">
-      <div class="customers">
+      <div class="customers" id="extension">
         <div class="customers__header-block">
           <h4 class="customers__header-text">
             What our customers have to say about us.
@@ -514,7 +514,7 @@
     <div class="our_team-container">
       <div class="our_team">
         <div class="our_team__header-block">
-          <h5 class="our_team__header-text">Our Team</h5>
+          <h5 class="main_header-text">Our Team</h5>
           <p class="our_team__header-subtext">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna
@@ -704,9 +704,9 @@
       </div>
     </div>
     <div class="contact-container">
-      <div class="contact">
+      <div class="contact" id="pricing">
         <div class="contact__header-block">
-          <h5 class="contact__header-text">Contact Us</h5>
+          <h5 class="main_header-text">Contact Us</h5>
           <p class="contact__header-subtext">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna
@@ -742,7 +742,7 @@
       </div>
     </div>
     <div class="footer-container">
-      <footer class="footer">
+      <footer class="footer" id="help">
         <div class="footer__dart_info">
           <div class="name_block">
             <img src="images/header_icon.png" alt="Header icon" />
@@ -774,11 +774,11 @@
         <div class="footer__links">
           <nav>
             <ul class="navigation_list_footer">
-              <li class="navigation__item_footer">Home</li>
-              <li class="navigation__item_footer">Service</li>
-              <li class="navigation__item_footer">Extension</li>
-              <li class="navigation__item_footer">Pricing</li>
-              <li class="navigation__item_footer">Help</li>
+              <li class="navigation__item_footer"><a href="#home">Home</a></li>
+              <li class="navigation__item_footer"><a href="#service">Service</a></li>
+              <li class="navigation__item_footer"><a href="#extension">Extension</a></li>
+              <li class="navigation__item_footer"><a href="#pricing">Pricing</a></li>
+              <li class="navigation__item_footer"><a href="#help">Help</a></li>
             </ul>
           </nav>
           <ul class="footer__social_links">
@@ -831,7 +831,8 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="script/slick.min.js"></script>
-    <script src="script/index.js"></script>
+    <script src="scripts/slick.min.js"></script>
+    <script src="scripts/modernizr-custom.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

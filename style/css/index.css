@@ -138,10 +138,6 @@ Resorted to normal white-space in all code tags
 Disabled the deprecated <marquee>, <blink> and <nobr> tag in some browsers
 
 */
-input[type="text"]::placeholder {
-  height: inherit;
-  line-height: inherit; }
-
 * {
   padding: 0;
   margin: 0;
@@ -154,11 +150,16 @@ ul {
   list-style-type: none; }
 
 .introduction-container {
-  background-image: url("../../images/header_background.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 50px 80px 180px 80px; }
+
+.webp .introduction-container {
+  background-image: url("../../images/header_background.webp"); }
+
+.no-webp .introduction-container {
+  background-image: url("../../images/header_background.png"); }
 
 .name__header-text {
   font-size: 15px;
@@ -299,13 +300,18 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("../../images/header_video_background.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   border: 1px solid #061e37;
   border-radius: 5px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); }
+
+.no-webp .introduction-video {
+  background-image: url("../../images/header_video_background.png"); }
+
+.webp .introduction-video {
+  background-image: url("../../images/header_video_background.webp"); }
 
 .introduction-video__link {
   width: 60px;
@@ -625,14 +631,6 @@ ul {
   margin: 0 0 0 25px;
   text-transform: uppercase; }
 
-.services__header-text {
-  font-size: 45px;
-  color: #061e37;
-  font-weight: 600;
-  font-family: "Raleway";
-  text-align: center;
-  margin: 0 0 30px 0; }
-
 .services__header-subtext {
   font-size: 15px;
   line-height: 25px;
@@ -640,7 +638,8 @@ ul {
   font-weight: 400;
   font-family: "Raleway";
   text-align: center;
-  width: inherit; }
+  width: inherit;
+  margin: 30px 0 0 0; }
 
 .services__header-block {
   display: flex;
@@ -651,11 +650,16 @@ ul {
   width: 100%; }
 
 .customers-container {
-  background-image: url("../../images/customers_background.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 38px 85px 38px 85px; }
+
+.no-webp .customers-container {
+  background-image: url("../../images/customers_background.png"); }
+
+.webp .customers-container {
+  background-image: url("../../images/customers_background.webp"); }
 
 .customers__header-block {
   width: 460px;
@@ -883,14 +887,6 @@ ul {
   margin: 0 0 80px 0;
   width: 100%; }
 
-.our_team__header-text {
-  font-size: 45px;
-  color: #061e37;
-  font-weight: 600;
-  font-family: "Raleway";
-  text-align: center;
-  margin: 0 0 30px 0; }
-
 .our_team__header-subtext {
   font-size: 15px;
   line-height: 25px;
@@ -898,7 +894,8 @@ ul {
   font-weight: 400;
   font-family: "Raleway";
   text-align: center;
-  width: inherit; }
+  width: inherit;
+  margin: 30px 0 0 0; }
 
 .contact-container {
   padding: 45px 0 90px 0;

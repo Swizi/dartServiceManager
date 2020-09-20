@@ -23,6 +23,13 @@ $(document).ready(function () {
       members_image[i].attachEvent("click", toggleMember(i));
     }
   }
+  var $page = $('html, body');
+  $('a[href*="#"]').click(function () {
+    $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - 70
+    }, 400);
+    return false;
+  });
 });
 
 
