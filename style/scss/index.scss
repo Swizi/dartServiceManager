@@ -3,6 +3,167 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 $hover-color: #061e37;
 
+/*
+    Tripoli is a generic CSS standard for HTML rendering. 
+    Copyright (C) 2007  David Hellsing
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 1em;
+  outline: none;
+}
+
+code,
+kbd,
+samp,
+pre,
+tt,
+var,
+textarea,
+input,
+select,
+isindex,
+listing,
+xmp,
+plaintext {
+  font: inherit;
+  font-size: 1em;
+  white-space: normal;
+}
+
+dfn,
+i,
+cite,
+var,
+address,
+em {
+  font-style: normal;
+}
+
+th,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a,
+img,
+a img,
+iframe,
+form,
+fieldset,
+abbr,
+acronym,
+object,
+applet,
+table {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td,
+center {
+  text-align: left;
+  vertical-align: top;
+}
+
+body {
+  line-height: 1;
+  background: white;
+  color: black;
+}
+
+q {
+  quotes: "" "";
+}
+
+ul,
+ol,
+dir,
+menu {
+  list-style: none;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+}
+
+a {
+  color: inherit;
+}
+
+font {
+  color: inherit !important;
+  font: inherit !important;
+  color: inherit !important;
+}
+
+/* disables some nasty font attributes in standard browsers */
+marquee {
+  overflow: inherit !important;
+  -moz-binding: none;
+}
+
+blink {
+  text-decoration: none;
+}
+
+nobr {
+  white-space: normal;
+}
+
+p {
+  width: inherit;
+}
+
+/*
+
+CHANGELOG
+
+23/8-07
+
+Added deprecated tags <listing>, <xmp> and <plaintext> in the code block
+
+Resorted to normal white-space in all code tags
+
+Disabled the deprecated <marquee>, <blink> and <nobr> tag in some browsers
+
+*/
+
+input[type="text"]::placeholder {
+  height: inherit;
+  line-height: inherit;
+}
+
 @mixin hover-effect {
   color: $hover-color;
   border-color: $hover-color;
@@ -51,7 +212,7 @@ ul {
   padding: 50px 80px 180px 80px;
 }
 
-.header__header-text {
+.name__header-text {
   font-size: 15px;
   line-height: 15px;
   color: #ffffff;
@@ -64,7 +225,7 @@ ul {
   font-weight: bold;
 }
 
-.header__name_block {
+.name_block {
   width: 177px;
   display: flex;
   justify-content: flex-start;
@@ -79,13 +240,19 @@ ul {
   align-items: center;
 }
 
-.navigation__item {
+.navigation__item,
+.navigation__item_footer {
   font-size: 15px;
   line-height: 25px;
   color: #ffffff;
   font-weight: 600;
   font-family: "Raleway";
   margin: 0 50px 0 0;
+}
+
+.navigation__item:nth-last-child(1),
+.navigation__item_footer:nth-last-child(1){
+  margin: 0;
 }
 
 .header-block__link {
@@ -538,7 +705,6 @@ ul {
 
 .services__drop_down_active {
   height: auto;
-  overflow: auto;
   visibility: visible;
   margin: 23px 0 0 0;
   opacity: 1;
@@ -769,21 +935,22 @@ ul {
   width: inherit;
 }
 
-.our_team__member-links{
+.our_team__member-links {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
-.our_team__links-item{
+.our_team__links-item {
   margin: 0 15px 0 15px;
 }
 
-.our_team__infos{
+.our_team__infos {
   margin: 35px 0 0 0;
   width: 100%;
 }
 
-.our_team__info{
+.our_team__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -796,11 +963,10 @@ ul {
   width: 100%;
 }
 
-.member_info-active{
+.member_info-active {
   opacity: 1;
   visibility: visible;
   height: auto;
-  overflow-y: auto;
 }
 
 .our_team_slider {
@@ -808,7 +974,7 @@ ul {
   width: 100%;
 }
 
-.our_team__chooser{
+.our_team__chooser {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -830,14 +996,14 @@ ul {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.15));
 }
 
-.our_team__member-image{
+.our_team__member-image {
   opacity: 0.5;
   transition: 0.8s;
   width: 100px;
   height: 100px;
 }
 
-.our_team__header-block{
+.our_team__header-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -864,7 +1030,173 @@ ul {
   text-align: center;
   width: inherit;
 }
+
+.contact-container {
+  padding: 45px 0 90px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.contact {
+  width: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__header-block {
+  font-size: 45px;
+  color: #061e37;
+  font-weight: 600;
+  font-family: "Raleway";
+  text-align: center;
+  margin: 0 0 50px 0;
+  width: 100%;
+}
+
+.contact__header-subtext {
+  font-size: 15px;
+  line-height: 25px;
+  color: #061e37;
+  font-weight: 400;
+  font-family: "Raleway";
+  text-align: center;
+  margin: 28px 0 0 0;
+  width: inherit;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact__input-text {
+  border: 1px solid #061e37;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 15px 20px 15px 20px;
+  display: block;
+  line-height: 20px;
+  color: #061e37;
+  font-weight: 500;
+  font-family: "Raleway";
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 0 20px 0;
+  background-color: #fafafa;
+}
+
+.contact__input-text:nth-child(2n) {
+  margin: 0 0 0 40px;
+}
+
+.contact__textarea {
+  border: 1px solid #061e37;
+  border-radius: 5px;
+  padding: 15px 20px 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0 0 20px 0;
+  background-color: #fafafa;
+  font-size: 14px;
+  line-height: 30px;
+  color: #061e37;
+  font-weight: 500;
+  font-family: "Raleway";
+  height: 150px;
+}
+
+.contact__input-checkbox {
+  font-size: 20px;
+  color: #061e37;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.contact__checkbox-text {
+  font-size: 15px;
+  color: #061e37;
+  font-weight: 500;
+  font-family: "Raleway";
+}
+
+.contact__button {
+  @include button_family;
+  color: #fff;
+  background-color: #1de9b6;
+  padding: 18px 45px 18px 45px;
+}
+
+.footer-container {
+  padding: 90px 80px 110px 80px;
+  background-color: #061e37;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__info_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: disc;
+  margin: 50px 0 0 0;
+}
+
+.footer__info-item:nth-child(1){
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer__info-item {
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Raleway";
+  margin: 0 0 0 45px;
+}
+
+.footer__social_links{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 60px 0 0 0;
+}
+
+.footer__social-item{
+  margin: 0 20px 0 0;
+}
+
+.footer__social-item:nth-last-child(1){
+  margin: 0;
+}
+
+.navigation_list_footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 // Hover effects
+
+.navigation__item_footer:hover{
+  cursor: pointer;
+}
 
 .header-block__link:hover,
 .navigation__item:hover {
@@ -876,6 +1208,10 @@ ul {
   color: #1de9b6;
 }
 
+.contact__button:hover {
+  background-color: #fafafa;
+  color: #1de9b6;
+}
 .customers__button:hover {
   color: #061e37;
   background-color: #fff;
@@ -898,7 +1234,7 @@ ul {
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
-.our_team__member-image:hover{
+.our_team__member-image:hover {
   cursor: pointer;
 }
 
@@ -1046,6 +1382,32 @@ button {
   .achievement-container {
     width: 50%;
   }
+  
+  .footer-container{
+    padding: 20px 15px 20px 15px;
+  }
+
+  .footer{
+    flex-direction: column;
+  }
+
+  .footer__dart_info,
+  .footer__info_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .footer__social_links{
+    justify-content: center;
+  }
+  .footer__dart_info{
+    margin: 0 0 15px 0;
+  }
+  .footer__info-item:nth-child(1){
+    list-style-type: disc;
+    margin: 0 0 0 45px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1087,24 +1449,34 @@ button {
     margin: 15px 0 0 0;
   }
 
-  .our_team{
+  .our_team {
     width: 100%;
   }
 
-  .our_team__member-image{
+  .our_team__member-image {
     width: 60px;
     height: 60px;
   }
-  .member_image-active{
+  .member_image-active {
     width: 100px !important;
     height: 100px !important;
     border: 14px solid #ffffff;
   }
-  .our_team__header-block{
+  .our_team__header-block {
     margin: 0 0 40px 0;
   }
-  .our_team__chooser{
+  .our_team__chooser {
     height: 100px;
+  }
+  .contact-container {
+    padding: 30px 15px 30px 15px;
+  }
+  .contact {
+    width: 100%;
+  }
+  .contact__input-text {
+    width: 100%;
+    margin: 0 0 20px 0 !important;
   }
 }
 
@@ -1141,6 +1513,18 @@ button {
   }
   .customers__text {
     text-align: center;
+  }
+  .navigation_list_footer{
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact__form {
+    flex-direction: column;
+  }
+  .contact__button {
+    margin: 20px 0 0 0;
   }
 }
 
